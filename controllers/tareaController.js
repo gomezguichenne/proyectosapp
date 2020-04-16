@@ -144,7 +144,7 @@ exports.eliminarTarea = async (req, res) => {
         const { proyecto } = req.query;
 
         // Si la tarea existe o no
-        let tarea = await Tarea.findById({_id:req.params.id});
+        let tarea = await Tarea.findById(req.params.id);
 
         // console.log(tarea);
 
