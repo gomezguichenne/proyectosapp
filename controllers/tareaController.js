@@ -136,7 +136,7 @@ exports.actualizarTarea = async (req, res) => {
 }
 
 // Elimina una tarea 
-exports.eliminarTarea = async(req, res) => {
+exports.eliminarTarea = async (req, res) => {
 
     try {
 
@@ -145,6 +145,8 @@ exports.eliminarTarea = async(req, res) => {
 
         // Si la tarea existe o no
         let tarea = await Tarea.findById(req.params.id);
+
+        console.log(tarea);
 
         if(!tarea) {
 
